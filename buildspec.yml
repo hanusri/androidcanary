@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo 'Compiling the Gradle Code'
+      - cd gradle-app && gradle build
+  post_build:
+    commands:
+      - echo 'Would deploy here'
+artifacts:
+  type: zip
+  files:
+  - 'gradle-app/build/**/*'
+
